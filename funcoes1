@@ -32,7 +32,7 @@ while True:
     opcao = input('Digite a opção: ')
 
     if opcao == '1':
-        cadastrar_produto(produtos)
+        cadastrar_produtos (produtos)
 
     elif opcao == '2':
         listar_produtos (produtos)
