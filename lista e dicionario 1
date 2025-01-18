@@ -1,0 +1,38 @@
+#armazenando os dados em um lista
+
+produtos = []
+
+#diante da situação que não consigo determinar a quantidade de itens que serão mencionados, utilizo o loop while. Adiciono uma condição no início para a primeira entrada, caso precise 
+#finalizar o programa.
+
+while True:
+
+    nome_produto = input('Digite o nome do pŕoduto: ')
+    if nome_produto == 'sair':
+        break
+
+    codigo_produto = int(input('Digite o código do produto: '))
+    preco = float(input('Digite o preco do produto: '))
+    qtd_estoque = int(input('Digite a quantidade no estoque: '))
+
+    #para os valores não sererm exibidos colados, adicionar print(''):
+    print('')
+    
+#armazenando-os em uma lista utilizando append. Ficará um elemento após o outro salvo na lista.
+    produtos.append (nome_produto)
+    produtos.append(codigo_produto)
+    produtos.append(preco)
+    produtos.append(qtd_estoque)
+
+#print('')
+
+#para ficar melhor a visualização, ao invés de utilizar a lista acima, 
+#pode-se criar um dicionário para cada conjunto de itens para gerar uma ordem de acesso aos valores de acordo com a chave e valor
+
+produto = {'nome do item':nome_produto,'código do produto': codigo_produto,'preço do produto': preco,'quantidade em estoque': qtd_estoque}
+
+produtos.append (produto)
+
+
+#exibir os produtos armazenados
+print(produtos)
