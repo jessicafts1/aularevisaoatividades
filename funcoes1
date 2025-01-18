@@ -1,0 +1,41 @@
+#após criar os arquivos, vamos seguir com a funções e solicitar a sua inserção:
+
+def cadastrar_produto(produtos):
+
+    nome_produto = input('Digite o nome do pŕoduto: ')
+    codigo_produto = int(input('Digite o código do produto: '))
+    preco = float(input('Digite o preco do produto: '))
+    qtd_estoque = int(input('Digite a quantidade no estoque: '))
+
+    print('')
+
+
+    produto = {'nome do item':nome_produto,'código do produto': codigo_produto,'preço do produto': preco,'quantidade em estoque': qtd_estoque}
+
+    produtos.append (produto)
+    
+# aqui vou solicitar os arquivos
+
+from cadastrar_produto import cadastrar_produto
+from listar_produto import listar_produto
+
+
+produtos = []
+
+while True:
+    
+    print('Digite o número que corresponde a opção desejada: ')
+    print('1 -CADASTRAR PRODUTO:')
+    print('2 -LISTAR PRODUTOS CADASTRADOS:')
+    print('* - SAIR')
+    print('')
+    opcao = input('Digite a opção: ')
+
+    if opcao == '1':
+        cadastrar_produto(produtos)
+
+    elif opcao == '2':
+        listar_produtos (produtos)
+
+    elif opcao =='*':
+        break
